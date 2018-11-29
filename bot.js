@@ -17,7 +17,7 @@ client.on('ready', () => {
     client.user.setStatus("idle")
 });
 //by ,$ ReBeL ء , 🔕#4777 'CODES SERVER'
-const prefix = "MC"
+const prefix = "4"
 client.on('message', async msg => { // eslint-disable-line
 	if (msg.author.bot) return undefined;
 	//by ,$ ReBeL ء , 🔕#4777 'CODES SERVER'
@@ -209,8 +209,8 @@ function play(guild, song) {
 	serverQueue.textChannel.send(`بدء تشغيل : **${song.title}**`);
 }//by ,$ ReBeL ء , 🔕#4777 'CODES SERVER'
 
-const adminprefix = "MC";//by ,$ ReBeL ء , 🔕#4777 'CODES SERVER'
-const devs = ['350547695569600522'];//by ,$ ReBeL ء , 🔕#4777 'CODES SERVER'
+const adminprefix = "4";//by ,$ ReBeL ء , 🔕#4777 'CODES SERVER'
+const devs = ['431150885549113344'];//by ,$ ReBeL ء , 🔕#4777 'CODES SERVER'
 client.on('message', message => {//by ,$ ReBeL ء , 🔕#4777 'CODES SERVER'
   var argresult = message.content.split(` `).slice(1).join(' ');//by ,$ ReBeL ء , 🔕#4777 'CODES SERVER'
     if (!devs.includes(message.author.id)) return;//by ,$ ReBeL ء , 🔕#4777 'CODES SERVER'
@@ -231,16 +231,12 @@ client.user.setAvatar(argresult);
 if (message.content.startsWith(adminprefix + 'setT')) {
   client.user.setGame(argresult, "https://www.twitch.tv/idk");
     message.channel.sendMessage(`**تم تغيير تويتش البوت إلى  ${argresult}**`)
-} else  
-  if (message.content.startsWith(adminprefix + 'setwt')) {
-  client.user.setActivity(argresult, {type:'WATCHING'});
-      message.channel.send(`✅`)
 }
 
 });
 
 client.on("message", message => {
- if (message.content === `MChelp`) {
+ if (message.content === `Phelp`) {
   const embed = new Discord.RichEmbed() //by ,$ ReBeL ء , 🔕#4777 'CODES SERVER'
       .setColor("#000000")//by ,$ ReBeL ء , 🔕#4777 'CODES SERVER'
       .setDescription(`
@@ -266,4 +262,4 @@ client.on("message", message => {
 	}
 });
    
-client.login(process.env.TOKEN3);
+client.login(process.env.BOT_TOKEN);

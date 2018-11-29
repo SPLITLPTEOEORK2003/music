@@ -1,1 +1,2 @@
-# music
+worker: node bot.js
+
